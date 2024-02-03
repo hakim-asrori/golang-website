@@ -1,0 +1,25 @@
+{{template "layout" .}} {{define "main"}}
+<h1>Product</h1>
+<table border="1" cellspacing="0" cellpadding="6">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Stock</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{range .}}
+    <tr align="middle">
+      <td>{{.ID}}</td>
+      <td>{{.Name}}</td>
+      <td>{{.Price}}</td>
+      <td>{{.Stock}}</td>
+      <td>{{.StockStatus}}</td>
+    </tr>
+    {{end}}
+  </tbody>
+</table>
+{{end}}
